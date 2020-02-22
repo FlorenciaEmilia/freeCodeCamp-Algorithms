@@ -1,0 +1,37 @@
+/*
+Make a PersonPassed
+Fill in the object constructor with the following methods below:
+
+getFirstName()
+getLastName()
+getFullName()
+setFirstName(first)
+setLastName(last)
+setFullName(firstAndLast)
+Run the tests to see the expected output for each method. The methods that take an argument must accept only one argument and it has to be a string. These methods must be the only available means of interacting with the object.
+*/
+
+var Person = function(firstAndLast) {
+    // Complete the method below and implement the others similarly
+    let names=firstAndLast
+    this.getFirstName=function(){
+      return names.split(" ")[0]
+    }
+    this.getLastName=function(){
+      return names.split(" ")[1];
+    }
+  
+    this.getFullName = function() {
+      return names;
+    };
+  
+    this.setFirstName=function(name){
+      names=name+" "+names.split(" ")[1];
+    }
+    this.setLastName=function(name){
+      names=names.split(" ")[0]+" "+name;
+    }
+      this.setFullName=function(name){
+      names=name;
+    }
+  };
